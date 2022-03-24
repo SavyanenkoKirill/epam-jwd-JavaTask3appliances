@@ -15,7 +15,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
     //private static final String APPLIANCES_DATABASE_FILEPATH = "src/main/resources/appliances_db.txt";
 /*    private final String APPLIANCES_DATABASE_FILEPATH = Objects.requireNonNull(getClass().getClassLoader()
             .getResource( " appliances_db.txt")).getPath();*/
-    private final String APPLIANCES_DATABASE_FILEPATH = new File("resources/appliances_db.txt").getAbsolutePath();
+    private static final String APPLIANCES_DATABASE_FILEPATH = new File("resources/appliances_db.txt").getAbsolutePath();
 
     @Override
     public List<Appliance> find(Criteria criteria) throws IOException {
