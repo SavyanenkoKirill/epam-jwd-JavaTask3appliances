@@ -19,23 +19,23 @@ public class Main {
 			ApplianceService service = factory.getApplianceService();
 
 			Criteria criteriaOven = new Criteria(SearchCriteria.Oven.class.getSimpleName());
-			criteriaOven.add(SearchCriteria.Oven.CAPACITY.toString(), 33);
+			criteriaOven.add(SearchCriteria.Oven.CAPACITY.toString(), 33.0);
 			appliances = service.find(criteriaOven);
 
 
 			ApplianceInfoPrinter.printToConsole(appliances);
 
 			criteriaOven = new Criteria(SearchCriteria.Oven.class.getSimpleName());
-			criteriaOven.add(SearchCriteria.Oven.HEIGHT.toString(), 45);
-			criteriaOven.add(SearchCriteria.Oven.DEPTH.toString(), 60);
+			criteriaOven.add(SearchCriteria.Oven.HEIGHT.toString(), 45.0);
+			criteriaOven.add(SearchCriteria.Oven.DEPTH.toString(), 60.0);
 
 			appliances = service.find(criteriaOven);
 			ApplianceInfoPrinter.printToConsole(appliances);
 
 			Criteria criteriaTabletPC = new Criteria(SearchCriteria.TabletPC.class.getSimpleName());
 			criteriaTabletPC.add(SearchCriteria.TabletPC.COLOR.toString(), "BLUE");
-			criteriaTabletPC.add(SearchCriteria.TabletPC.DISPLAY_INCHES.toString(), 14);
-			criteriaTabletPC.add(SearchCriteria.TabletPC.MEMORY_ROM.toString(), 4);
+			criteriaTabletPC.add(SearchCriteria.TabletPC.DISPLAY_INCHES.toString(), 14.0);
+			criteriaTabletPC.add(SearchCriteria.TabletPC.MEMORY_ROM.toString(), 4.0);
 
 			appliances = service.find(criteriaOven);
 			ApplianceInfoPrinter.printToConsole(appliances);

@@ -12,7 +12,6 @@ class CriteriaValidatorTest {
         Criteria criteria = new Criteria(SearchCriteria.Oven.class.getSimpleName());
         criteria.add(SearchCriteria.Laptop.DISPLAY_INCHES.toString(), 33);
         boolean actualValidity = CriteriaValidator.validateCriteria(criteria);
-        boolean expectedValidity = false;
-        Assertions.assertEquals(expectedValidity, actualValidity);
+        Assertions.assertFalse(actualValidity);
     }
 }

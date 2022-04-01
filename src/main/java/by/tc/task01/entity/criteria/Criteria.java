@@ -2,10 +2,8 @@ package main.java.by.tc.task01.entity.criteria;
 
 import main.java.by.tc.task01.entity.Appliance;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Criteria {
 
@@ -26,7 +24,7 @@ public class Criteria {
     }
 
     public void add(String searchCriteria, Object value) {
-        criteria.put(searchCriteria, value instanceof Integer ? ((Integer) value).doubleValue() : value);
+        criteria.put(searchCriteria, value);
     }
 
     public void remove(String key) {
